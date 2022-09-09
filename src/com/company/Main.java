@@ -5,33 +5,21 @@ public class Main
 
     public static void main(String[] args)
     {
-        int x = 38;
-        double y = Math.sqrt(x);
-        int n = 2;
-        boolean prime = true;
-        while (n <= y) {
-            if (x % n == 0) {
-                prime = false;
-            }
-            n++;
-        }
-        System.out.println(prime);
-
-        // or
-
-        boolean test=false;
-        int pn=5;
-        int tpn=pn-1;
-        while(tpn>1)
+        int i = 24;
+        boolean is_prime = false;
+        if (i > 1)
         {
-            if(pn%tpn==0)
+            for (int u = 2; u <= i; u++)
             {
-                test=true;
-            }
-            else {
-                tpn--;
+                if (i%u == 0)
+                {
+                    if (i == u)
+                        is_prime = true;
+                    else
+                        break;
+                }
             }
         }
-        System.out.println(test);
+        System.out.println(is_prime);
     }
 }
